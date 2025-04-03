@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collaborative Pixel Video</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>
+  <link rel="stylesheet" href="styles.css"> 
+  <script src="script.js"></script>
+    
+</head>
+<body>
+  <div id="app">
+    <h1>Collaborative Pixel Video</h1>
+    
+    <div id="videoContainer">
+      <div class="video-section" id="localVideoContainer">
+        <h3>Your Pixel Video</h3>
+      </div>
+      
+      <div class="video-section" style="flex-grow: 1;">
+        <h3>Other Participants</h3>
+        <div id="videosContainer">
+        </div>
+      </div>
+    </div>
+    
+    <div id="drawingContainer">
+      <h3>Collaborative Drawing Canvas</h3>
+      <canvas id="drawingCanvas" width="800" height="600" style="border:1px solid #ccc; background:white;"></canvas>
+    </div>
+    
+    <div id="controls">
+      <button id="finishButton">Save Drawing</button>
+    </div>
+    
+    <div id="messages">
+      <h3>System Messages</h3>
+    </div>
+  </div>
+
+</body>
+</html>
